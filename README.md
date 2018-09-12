@@ -1,5 +1,5 @@
 # DeadlockInSocketsHandler
-Test project confirming deadlock in SocketsHttpHandler SDK 2.1.0 and above
+Repro project confirming deadlock in SocketsHttpHandler .Net Core version 2.1 and above for the issue https://github.com/dotnet/corefx/issues/32262
 
 Compile the console app and start. It would produce output similar to:
 
