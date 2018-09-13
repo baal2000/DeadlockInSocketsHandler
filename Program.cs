@@ -135,7 +135,7 @@ namespace DeadlockInSocketsHandler
         {
             lock (openSockets)
             {
-                foreach (IDisposable s in openSockets)
+                foreach (var s in openSockets)
                 {
                     try
                     {
