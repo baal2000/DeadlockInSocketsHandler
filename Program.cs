@@ -137,7 +137,18 @@ namespace DeadlockInSocketsHandler
             {
                 foreach (IDisposable s in openSockets)
                 {
-                    s.Dispose();
+                    try
+                    {
+                        s.Shutdown(SocketShutdown.Both);
+                    }
+                    catch (SocketException)
+                    {
+                    }
+                    catch (ObjectDiposedException)
+                    {
+                        continue;
+                    }
+                    s.Close();
                 }
             }
         }
