@@ -144,7 +144,7 @@ namespace DeadlockInSocketsHandler
                     catch (SocketException)
                     {
                     }
-                    catch (ObjectDiposedException)
+                    catch (ObjectDisposedException)
                     {
                         continue;
                     }
